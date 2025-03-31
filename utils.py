@@ -74,7 +74,7 @@ def make_predictions(sample, imagedataset, imagedl, model_path, csv_path, confid
 
     # Load checkpoint
     cp_filepath = model_path
-    checkpoint = torch.load(cp_filepath, map_location=device)
+    checkpoint = torch.load(cp_filepath, map_location=device, weights_only=False)
     model.load_state_dict(checkpoint['model_state_dict'])
 
     model.to(device)
@@ -152,22 +152,44 @@ def make_predictions(sample, imagedataset, imagedl, model_path, csv_path, confid
     print(f'Saved CSV at: {csv_path}')
 
 def display_random_images(imagedataset, num_images_to_display=9):
-    length_of_dataset = len(imagedataset)
-    
-    if num_images_to_display > length_of_dataset:
-        raise ValueError("The count of random images must not exceed the length of the dataset.")
-    
-    random_indices = random.sample(range(length_of_dataset), num_images_to_display)
-    
-    fig, axs = plt.subplots(3, 3, figsize=(10, 10))
-    
-    for i, idx in enumerate(random_indices):
-        image = imagedataset[idx]
-        image_np = transforms.ToPILImage()(image)
-        image_np = image_np.convert('RGB')
-        image_np = np.array(image_np)
+    num_uploaded = len(imagedataset)
+
+    # if a user uploads less than 9 images, show all of them
+    if num_images_to_display > num_uploaded:
+        print("Fewer than 9 images uploaded. Showing all.")
         
-        axs[i // 3, i % 3].imshow(image_np)
-        axs[i // 3, i % 3].axis('off')
-    
-    plt.show()
+        fig, axs = plt.subplots(3, 3, figsize=(10, 10))
+
+        axs = axs.flatten()
+
+        for i in range(num_uploaded):
+            image = imagedataset[i]
+            image_np = transforms.ToPILImage()(image)
+            image_np = image_np.convert('RGB')
+            image_np = np.array(image_np)
+            
+            axs[i].imshow(image_np)
+            axs[i].axis('off')
+
+        for i in range(num_uploaded, 9):
+            axs[i].axis('off')
+        
+        plt.tight_layout()
+        plt.show()
+
+    # if a user uploads 9 or more images, show a random sample
+    else: 
+        random_indices = random.sample(range(length_of_dataset), num_images_to_display)
+        
+        fig, axs = plt.subplots(3, 3, figsize=(10, 10))
+        
+        for i, idx in enumerate(random_indices):
+            image = imagedataset[idx]
+            image_np = transforms.ToPILImage()(image)
+            image_np = image_np.convert('RGB')
+            image_np = np.array(image_np)
+            
+            axs[i // 3, i % 3].imshow(image_np)
+            axs[i // 3, i % 3].axis('off')
+        
+        plt.show()
