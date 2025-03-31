@@ -179,7 +179,7 @@ def display_random_images(imagedataset, num_images_to_display=9):
 
     # if a user uploads 9 or more images, show a random sample
     else: 
-        random_indices = random.sample(range(length_of_dataset), num_images_to_display)
+        random_indices = random.sample(range(num_uploaded), num_images_to_display)
         
         fig, axs = plt.subplots(3, 3, figsize=(10, 10))
         
