@@ -1,13 +1,15 @@
 # Automated determination of transport and depositional environments in sand and sandstones
 
 ## Description
-This repository includes all code related to the manuscript "Automated determination of transport and depositional environments in sand and sandstones" by Michael Hasson, M. Colin Marvin, and Mathieu Lapôtre. Using the files in this repository, anyone can use the model documented in our manuscript to identify the transport or depositional environment of scanning electron microscope (SEM) images of individual grains of quartz sand (as long as the meet the requirements for model input). The only configuration required is for a user to set the path to their folder of images and path where they would like the results to be saved.
+This repository includes all code related to the manuscript "Automated determination of transport and depositional environments in sand and sandstones" by Michael Hasson, M. Colin Marvin, and Mathieu Lapôtre (PNAS, 2024). Using the files in this repository, anyone can use the model documented in our manuscript to identify the transport or depositional environment of scanning electron microscope (SEM) images of individual grains of quartz sand (as long as the meet the requirements for model input). The only configuration required is for a user to set the path to their folder of images and path where they would like the results to be saved.
 
 The model has been validated on modern and ancient quartz grains, so it can be used on modern sediment and lithified rocks. 
 
 Included are: 
 - Tutorials for use with example outputs
 - All code related to training and evaluating the model used in this study
+
+If you use this for research, please cite our publication: Hasson, M., Marvin, M.C., and Lapôtre, M.G.A., 2024, Automated determination of transport and depositional environments in sand and sandstones: Proceedings of the National Academy of Sciences, v. 121, p. e2407655121, doi:10.1073/pnas.2407655121.
 
 ## Using the tool:
 
@@ -20,8 +22,6 @@ From the Colab notebook, simply hit shift-enter or click the play buttons on eac
 To classify your own images, upload them to Google Colab and change the path and name of the sample. A new CSV file of model predictions will be saved in the "Predictions" folder that you can then download to your local computer. 
 
 Be sure to look through the checklist (below and in the inference notebook) to make sure that your images meet the requirements for classification!
-
-If you use SandAI in your research, please cite our publication: Hasson, M., Marvin, M.C., and Lapôtre, M.G.A., 2024, Automated determination of transport and depositional environments in sand and sandstones: Proceedings of the National Academy of Sciences, v. 121, p. e2407655121, doi:10.1073/pnas.2407655121.
 
 
 ## Checklist
