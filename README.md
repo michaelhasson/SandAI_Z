@@ -21,6 +21,9 @@ To classify your own images, upload them to Google Colab and change the path and
 
 Be sure to look through the checklist (below and in the inference notebook) to make sure that your images meet the requirements for classification!
 
+If you use SandAI in your research, please cite our publication: Hasson, M., Marvin, M.C., and Lapôtre, M.G.A., 2024, Automated determination of transport and depositional environments in sand and sandstones: Proceedings of the National Academy of Sciences, v. 121, p. e2407655121, doi:10.1073/pnas.2407655121.
+
+
 ## Checklist
 
 Before using the model, it is critical to make that images are suitable for model inference. Failure to do so will lead to inaccurate results. The requirements are:
