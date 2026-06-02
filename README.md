@@ -23,6 +23,9 @@ To classify your own images, upload them to Google Colab and change the path and
 
 Be sure to look through the checklist (below and in the inference notebook) to make sure that your images meet the requirements for classification!
 
+## Submitting images:
+
+If you are willing to share your images (for future model improvements), please do so at [this link](https://docs.google.com/forms/d/e/1FAIpQLSfds06XC0Tg1Km7ei_WAqNm0a-K0pYoxayOnjfhQJgqOlD5rA/viewform). If you provide your name, we will acknowledge you in any future work! 
 
 ## Checklist
 
@@ -69,3 +72,26 @@ Make sure that your images *do not* look like these before using the classifier!
     <td><img src="./Checklist_images/Coatings/91_annotated.png" width="375" height="300"></td>
   </tr>
 </table>
+
+## Calibration and Precision-Recall Curves
+
+One vs. rest calibration and precision-recall curves are shown here to gauge model performance on each class. We constructed calibration curves for each class using in-sample test predictions.
+
+<table>
+  <tr>
+    <td><img src="./cal_pr_curves/Calibration_curves.png" width="375" height="300"></td>
+  </tr>
+</table>
+
+Above: One-versus-rest calibration curves for SandAI classes.  Results demonstrate agreement between prediction scores and actual likelihood of correct prediction. Points represent centers of probability bins.
+
+<table>
+  <tr>
+    <td><img src="./cal_pr_curves/PR_curves.png" width="562" height="450"></td>
+  </tr>
+</table>
+
+Above: One-versus-rest precision-recall curves for SandAI classes.
+    
+
+
