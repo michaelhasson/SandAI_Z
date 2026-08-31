@@ -78,7 +78,7 @@ One vs. rest calibration and precision-recall curves are shown here to gauge mod
 
 <table>
   <tr>
-    <td><img src="./cal_pr_curves/combined_calibration_pr_curves.png" width="375" height="300"></td>
+    <td><img src="./cal_pr_curves/combined_calibration_pr_curves.png" width="750" height="600"></td>
   </tr>
 </table>
 
