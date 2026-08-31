@@ -82,6 +82,4 @@ One vs. rest calibration and precision-recall curves are shown here to gauge mod
   </tr>
 </table>
 
-Above: One-versus-rest calibration and precision-recall curves for SandAI-Z classes.  Results demonstrate agreement between prediction scores and actual likelihood of correct prediction. Points represent centers of probability bins.
-
-
+Above: One-versus-rest calibration and precision-recall curves for SandAI-Z classes.  Results demonstrate approximate agreement between prediction scores and actual likelihood of correct prediction. Points represent centers of probability bins.
