@@ -1,7 +1,7 @@
 # Automated determination of transport and depositional environments in sand and sandstones
 
 ## Description
-This repository includes all code related to the manuscript "Automated determination of transport and depositional environments in sand and sandstones" by Michael Hasson, M. Colin Marvin, and Mathieu Lapôtre (PNAS, 2024). Using the files in this repository, anyone can use the model documented in our manuscript to identify the transport or depositional environment of scanning electron microscope (SEM) images of individual grains of quartz sand (as long as the meet the requirements for model input). The only configuration required is for a user to set the path to their folder of images and path where they would like the results to be saved.
+This repository includes all code related to the manuscript "Zircon transport histories revealed by automated classification of scanning electron microscope images" by Michael Hasson, M. Colin Marvin, and Mathieu Lapôtre (in revision, Journal of Sedimentary Research). Using the files in this repository, anyone can use the model documented in our manuscript to identify the transport or depositional environment of scanning electron microscope (SEM) images of individual grains of quartz sand (as long as the meet the requirements for model input). The only configuration required is for a user to set the path to their folder of images and path where they would like the results to be saved.
 
 The model has been validated on modern and ancient quartz grains, so it can be used on modern sediment and lithified rocks. 
 
@@ -9,11 +9,10 @@ Included are:
 - Tutorials for use with example outputs
 - All code related to training and evaluating the model used in this study
 
-If you use this for research, please cite our publication: Hasson, M., Marvin, M.C., and Lapôtre, M.G.A., 2024, Automated determination of transport and depositional environments in sand and sandstones: Proceedings of the National Academy of Sciences, v. 121, p. e2407655121, doi:10.1073/pnas.2407655121.
 
 ## Using the tool:
 
-Using the tool is very simple. Click this button to open the inference software in Google Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michaelhasson/SandAI/blob/main/Inference_notebook_Colab.ipynb) 
+Using the tool is very simple. Click this button to open the inference software in Google Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/michaelhasson/SandAI_Z/blob/main/Zircon_inference_notebook_Colab.ipynb) 
 
 Google Colab is a free service that will let you quickly infer the classes of your images. No coding, downloading, or configuration is required. Simply click the button and follow the instructions inside.
 
