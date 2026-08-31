@@ -58,7 +58,7 @@ def make_predictions(sample, imagedataset, imagedl, model_path, csv_path, confid
     device = torch.device("cpu")
     
     # Set class names
-    class_names = {0: 'Eolian', 1: 'Glacial', 2: 'Beach', 3: 'Fluvial'}
+    class_names = {0: 'Eolian', 1: 'Beach', 2: 'Fluvial'}
     
     # Load dataset/loader
     dataset = imagedataset 
@@ -103,7 +103,7 @@ def make_predictions(sample, imagedataset, imagedl, model_path, csv_path, confid
 
             filtered_preds = preds[mask]
 
-            filtered_filenames = [imagedataset.filenames[idx] for i, keep in enumerate(mask) if keep]  # Get the filename for this specific batch index
+            filtered_filenames = [imagedataset.filenames[idx] for i, keep in enumerate(mask) if keep] 
             filtered_filenames_list.extend(filtered_filenames)
 
             filtered_probabilities = probs[mask].tolist()
@@ -131,11 +131,9 @@ def make_predictions(sample, imagedataset, imagedl, model_path, csv_path, confid
     # Create summary data
     summary_data = {
         'Eolian_count': [class_counts.get('Eolian_count', '')],
-        'Glacial_count': [class_counts.get('Glacial_count', '')],
         'Beach_count': [class_counts.get('Beach_count', '')],
         'Fluvial_count': [class_counts.get('Fluvial_count', '')],
         'Eolian_percentage': [class_percentages.get('Eolian_percentage', '')],
-        'Glacial_percentage': [class_percentages.get('Glacial_percentage', '')],
         'Beach_percentage': [class_percentages.get('Beach_percentage', '')],
         'Fluvial_percentage': [class_percentages.get('Fluvial_percentage', '')]
     }
